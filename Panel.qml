@@ -11,8 +11,8 @@ import "Model.js" as Model
 // shell.json entry.
 Panel {
   id: root
-  moduleName: "io.github.tbye.omadown"
-  ipcTarget: "io.github.tbye.omadown"
+  moduleName: "com.tbye.omadown"
+  ipcTarget: "com.tbye.omadown"
   manageIpc: false
 
   property var anchorItem: null

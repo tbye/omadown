@@ -13,7 +13,7 @@ import "Model.js" as Model
 // would never match.
 BarWidget {
   id: root
-  moduleName: "io.github.tbye.omadown"
+  moduleName: "com.tbye.omadown"
 
   // nf-md-clock, from the same Nerd Font the bar already draws with.
   readonly property string clockIcon: "󰥔"
@@ -114,7 +114,7 @@ BarWidget {
   }
 
   IpcHandler {
-    target: "io.github.tbye.omadown"
+    target: "com.tbye.omadown"
 
     function refresh(): void { root.broadcast("refresh") }
     function open(): void { root.open() }

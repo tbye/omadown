@@ -8,7 +8,7 @@ This is a `bar-widget`. The details panel is loaded by `BarWidget.qml`. The mani
 
 ## Install
 
-A plugin is a git repository with `manifest.json` at its root. Omarchy clones it into `~/.config/omarchy/plugins/io.github.tbye.omadown/` and turns updates into a fast-forward of that checkout.
+A plugin is a git repository with `manifest.json` at its root. Omarchy clones it into `~/.config/omarchy/plugins/com.tbye.omadown/` and turns updates into a fast-forward of that checkout.
 
 ```bash
 omarchy plugin add https://github.com/tbye/omadown.git --enable
@@ -17,8 +17,8 @@ omarchy plugin add https://github.com/tbye/omadown.git --enable
 `--enable` asks which bar section to use. The manifest asks for the right side. To place it yourself later:
 
 ```bash
-omarchy plugin enable io.github.tbye.omadown --section right
-omarchy bar move io.github.tbye.omadown --section center
+omarchy plugin enable com.tbye.omadown --section right
+omarchy bar move com.tbye.omadown --section center
 ```
 
 Add refuses to run without a terminal unless you pass `--yes`. Plugins run unsandboxed inside `omarchy-shell`. Read the code before you enable it.
@@ -26,7 +26,7 @@ Add refuses to run without a terminal unless you pass `--yes`. Plugins run unsan
 ## Remove
 
 ```bash
-omarchy plugin remove io.github.tbye.omadown
+omarchy plugin remove com.tbye.omadown
 ```
 
 That drops the checkout and the bar slot. The `shell.json` entry goes with the slot, so copy your dates out first if you want them. Removal does not touch any other plugin or any file outside that entry.
@@ -37,15 +37,15 @@ MIT. See [LICENSE](LICENSE). There are no external dependencies, downloads, or i
 
 ## Upgrade
 
-Countdowns live on the `io.github.tbye.omadown` entry in `~/.config/omarchy/shell.json`, not in the plugin checkout. An update replaces the QML and leaves your dates where they are.
+Countdowns live on the `com.tbye.omadown` entry in `~/.config/omarchy/shell.json`, not in the plugin checkout. An update replaces the QML and leaves your dates where they are.
 
 ```bash
-omarchy plugin update io.github.tbye.omadown
+omarchy plugin update com.tbye.omadown
 ```
 
 That fetches `origin`, shows the diff, and fast-forwards. `omarchy plugin update` does every git-managed plugin. Pass `--yes` to skip the prompt.
 
-The installed copy fast-forwards only. A local edit inside `~/.config/omarchy/plugins/io.github.tbye.omadown/` blocks the update. Change this repository, commit, and update again.
+The installed copy fast-forwards only. A local edit inside `~/.config/omarchy/plugins/com.tbye.omadown/` blocks the update. Change this repository, commit, and update again.
 
 ## Use
 
@@ -63,9 +63,9 @@ With hours off, the bar counts calendar days (`12d`, or `Today` on the day). Wit
 Open and close the same popup from the shell:
 
 ```bash
-omarchy-shell shell summon io.github.tbye.omadown '{}'
-omarchy-shell shell hide io.github.tbye.omadown
-omarchy-shell shell toggle io.github.tbye.omadown '{}'
+omarchy-shell shell summon com.tbye.omadown '{}'
+omarchy-shell shell hide com.tbye.omadown
+omarchy-shell shell toggle com.tbye.omadown '{}'
 ```
 
 Escape closes it.
@@ -76,7 +76,7 @@ The shell stores the list inline on the bar entry:
 
 ```json
 {
-  "id": "io.github.tbye.omadown",
+  "id": "com.tbye.omadown",
   "showHours": true,
   "defaultId": "trip",
   "events": [
