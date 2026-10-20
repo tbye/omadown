@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.tbye.omadown",
+  "name": "Omadown",
+  "version": "1.0.0",
+  "author": "tbye",
+  "homepage": "https://github.com/tbye/omadown",
+  "license": "MIT",
+  "description": "Countdown dates on the bar. The pinned event shows days remaining, and an optional hour count. Click the plugin for every countdown, nearest first.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Omadown",
+    "description": "Clock icon with the days left until the pinned countdown.",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "showHours": false,
+      "defaultId": "",
+      "events": []
+    },
+    "schema": [
+      {
+        "key": "showHours",
+        "type": "boolean",
+        "label": "Show hours"
+      }
+    ]
+  }
+}
