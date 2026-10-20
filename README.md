@@ -4,7 +4,7 @@ Omadown is an [Omarchy](https://omarchy.org/) bar plugin. It puts a clock icon o
 
 The countdown marked as the default is the one on the bar. If none is marked, the bar shows the nearest event instead.
 
-![Omadown open, with Christmas and a birthday](preview.png)
+<img src="preview.png" alt="Omadown open, with Christmas and a birthday" width="440" height="513">
 
 This is a `bar-widget`. The details panel is loaded by `BarWidget.qml`. The manifest does not declare a second plugin kind, and the plugin does not start a second Quickshell process.
 
